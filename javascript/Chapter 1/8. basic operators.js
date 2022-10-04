@@ -46,7 +46,7 @@ alert( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
 // Usually, the plus operator + sums numbers.
 
 // But, if the binary + is applied to strings, it merges (concatenates) them:
-let s = "my" + "string";
+let s = "my" + " string";
 alert(s); // mystring
 alert( '1' + 2 ); // "12"
 alert( 2 + '1' ); // "21"

@@ -52,10 +52,10 @@ let str = "Hello";
 let str2 = 'Single quotes are ok too';
 let phrase = `can embed another ${str}`;
 
-let name = "John";
+let name1 = "John";
 
 // embed a variable
-alert( `Hello, ${name}!` ); // Hello, John!
+alert( `Hello, ${name1}!` ); // Hello, John!
 
 // embed an expression
 alert( `the result is ${1 + 2}` ); // the result is 3
@@ -76,7 +76,7 @@ alert( isGreater ); // true (the comparison result is "yes")
 // The special null value does not belong to any of the types described above.
 
 // It forms a separate type of its own which contains only the null value:
-let age = null;
+let age1 = null;
 // In JavaScript, null is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
 // It’s just a special value which represents “nothing”, “empty” or “value unknown”.
 
@@ -90,7 +90,7 @@ let age = null;
 
 // If a variable is declared, but not assigned, then its value is undefined:
 
-let age;
+let age2;
 
 alert(age); // shows "undefined"
 let age = 100;
@@ -101,7 +101,6 @@ age = undefined;
 alert(age); // "undefined"
 
 // We don’t recommend doing that. Normally, one uses null to assign an “empty” or “unknown” value to a variable, while undefined is reserved as a default initial value for unassigned things.
-
 
 
 // The typeof operator

@@ -108,6 +108,7 @@ while (true) {
   if (!value) break; // (*)
 
   sum += value;
+  console.log(sum)
 
 }
 alert( 'Sum: ' + sum );

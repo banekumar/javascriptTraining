@@ -1,4 +1,4 @@
-// Semicolon        
+// // Semicolon        
 
 alert('Hello')
 alert('World')
