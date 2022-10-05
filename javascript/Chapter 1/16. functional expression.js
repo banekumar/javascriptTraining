@@ -14,8 +14,8 @@ function sayHi() {
 
 // For example:
 
-let sayHi = function() {
-  alert( "Hello" );
+let sayHi = function(a, b) {
+  alert( "Hello" + a + b );
 };
 
 
@@ -76,16 +76,16 @@ function ask(question, yes, no) {
     else no();
   }
   
-  function showOk() {
-    alert( "You agreed." );
-  }
-  
-  function showCancel() {
-    alert( "You canceled the execution." );
-  }
-  
-  // usage: functions showOk, showCancel are passed as arguments to ask
-  ask("Do you agree?", showOk, showCancel);
+function showOk() {
+  alert( "You agreed." );
+}
+
+function showCancel() {
+  alert( "You canceled the execution." );
+}
+
+// usage: functions showOk, showCancel are passed as arguments to ask
+ask("Do you agree?", showOk, showCancel);
 
 
 // The arguments showOk and showCancel of ask are called callback functions or just callbacks.
@@ -95,15 +95,15 @@ function ask(question, yes, no) {
 // We can use Function Expressions to write an equivalent, shorter function:
 
 function ask(question, yes, no) {
-    if (confirm(question)) yes()
-    else no();
-  }
-  
-  ask(
-    "Do you agree?",
-    function() { alert("You agreed."); },
-    function() { alert("You canceled the execution."); }
-  );
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  function() { alert("You agreed."); },
+  function() { alert("You canceled the execution."); }
+);
 
 // Here, functions are declared right inside the ask(...) call. They have no name, and so are called anonymous. Such functions are not accessible outside of ask (because they are not assigned to variables), but that’s just what we want here.
 // -------------------------------------------------
@@ -143,7 +143,7 @@ let sum = function(a, b) {
 // And after all Function Declarations are processed, the code is executed. So it has access to these functions.
 
 
-For example, this works:
+// For example, this works:
 
 sayHi("John"); // Hello, John
 

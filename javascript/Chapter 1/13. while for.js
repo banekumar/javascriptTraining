@@ -80,7 +80,7 @@ for (; i < 3; i++) { // no need for "begin"
 let i = 0;
 
 for (; i < 3;) {
-  alert( i++ );
+  alert( ++i );
 }
 
 

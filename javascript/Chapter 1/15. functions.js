@@ -79,15 +79,19 @@ alert( userName ); // Bob, the value was modified by the function
 
 let userName = 'John';
 
-function showMessage() {
+function showMessage(name) {
+  let hello = name
+  hello = userName
+
   let userName = "Bob"; // declare a local variable
 
   let message = 'Hello, ' + userName; // Bob
+  alert(hello)
   alert(message);
 }
 
 // the function will create and use its own userName
-showMessage();
+showMessage("Bob");
 
 alert( userName ); // John, unchanged, the function did not access the outer variable
 
@@ -114,9 +118,9 @@ showMessage('Ann', "What's up?"); // Ann: What's up? (**)
 
 
 
-function showMessage(from, text) {
+function showMessage(dom, text) {
 
-    from = '*' + from + '*'; // make "from" look nicer
+     from = '*' + dom + '*'; // make "from" look nicer
   
     alert( from + ': ' + text );
   }
